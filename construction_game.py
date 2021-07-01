@@ -25,13 +25,13 @@ def global_cost (I1, I2): # t_C (equation 15)
 
 # Game data (from file experiment_parameters.txt)
 Human_actions = ["AH1", "AH2", "AH3"] 
-Payoff_Human_actions = [6, 0, -6]
-time_human_actions = [15, 0, 15]
+Payoff_Human_actions = [2.5, 0, -2.5]
+time_human_actions = [10, 0, 10]
 Robot_actions = ["AR1", "AR2", "AR3"]
-time_robot_actions = [75, 0, 75]
-Payoff_method1_Robot_actions = [-1.2, 0, -1.2,  1.2, 0, -1.2, -1.2, 0, 1.2] # C2 utilities
-Payoff_method2_Robot_actions = [1.2, 0, -1.2,  1.2, 0, -1.2, -1.2, 0, 1.2] # C1 utilities
-cubes = 4
+time_robot_actions = [15, 0, 15]
+Payoff_method1_Robot_actions = [-1.67, 0, -1.67,  1.67, 0, -1.67, -1.67, 0, 1.67] # C2 utilities
+Payoff_method2_Robot_actions = [1.67, 0, -1.67,  1.67, 0, -1.67, -1.67, 0, 1.67] # C1 utilities
+cubes = 3
 number_of_simulation = 10000
 
 #initialisation of variables

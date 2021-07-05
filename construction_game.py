@@ -25,13 +25,13 @@ def global_cost (I1, I2): # t_C (equation 15)
 
 # Game data (from file experiment_parameters.txt)
 Human_actions = ["AH1", "AH2", "AH3"] 
-Payoff_Human_actions = [2.5, 0, -2.5]
-time_human_actions = [10, 0, 10]
+Payoff_Human_actions = [2, 0, -2]
+time_human_actions = [15, 0, 15]
 Robot_actions = ["AR1", "AR2", "AR3"]
 time_robot_actions = [15, 0, 15]
-Payoff_method1_Robot_actions = [-1.67, 0, -1.67,  1.67, 0, -1.67, -1.67, 0, 1.67] # C2 utilities
-Payoff_method2_Robot_actions = [1.67, 0, -1.67,  1.67, 0, -1.67, -1.67, 0, 1.67] # C1 utilities
-cubes = 3
+Payoff_method1_Robot_actions = [-2, 0, -2,  2, 0, -2, -2, 0, 2] # C2 utilities
+Payoff_method2_Robot_actions = [2, 0, -2,  2, 0, -2, -2, 0, 2] # C1 utilities
+cubes = 5
 number_of_simulation = 10000
 
 #initialisation of variables
@@ -167,7 +167,7 @@ while I1 < len(Human_intelligence_1):
             if 0 != round(I3, 2):
                 errors_improvement_percentage = ((I3 - mean(ratio_human_errors))/I3)*100
             else:
-                errors_improvement_percentage = 0
+                errors_improvement_percentage = 0.0
             # print ("errors_improvement_percentage", errors_improvement_percentage)
             # sleep (1)
             mean_H_errors.append(errors_improvement_percentage)
@@ -218,15 +218,16 @@ while (j < len(figure_I1)):
         for list1_i, list2_i in zip_object:
             difference.append(list1_i-list2_i)
 
-        plt.plot(list_I2, difference,'-o')
+        plt.plot(list_I2, difference,'--o', markersize=10, label='$I_1 = $'+str(i))
         plt.annotate('$I_1 = $' + str(i), xy= (list_I2[len(list_I2)-1], difference[len(difference)-1]), xytext=(list_I2[len(list_I2)-1]+0.05, difference[len(difference)-1]+0), arrowprops=dict())
         plt.xlabel('Values of $I_2$')
         plt.ylabel('Difference between the average output time (seconds) obtained by case 1 and 3 over 10000 simulations')
-        
+    
         list_I2 = []
         i += 0.1 # step to change I_1
         i = round(i, 2)
-plt.plot(0, mean_time_2[len(mean_time_2)-1] - mean_time_1[len(mean_time_1)-1],'-o')
+plt.plot(0, mean_time_2[len(mean_time_2)-1] - mean_time_1[len(mean_time_1)-1],'--o', markersize=10, label='$I_1 = $'+str(i))
+plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0.)
 plt.annotate('$I_1 = $' + str(1), xy= (0, mean_time_2[len(mean_time_2)-1] - mean_time_1[len(mean_time_1)-1]), xytext=(0.05, mean_time_2[len(mean_time_2)-1] - mean_time_1[len(mean_time_1)-1]), arrowprops=dict())
 plt.savefig("fig1.jpg", bbox_inches='tight', pad_inches=0.5)
 
@@ -266,7 +267,7 @@ while (j < len(figure_I1)):
         for list1_i, list2_i in zip_object:
             difference.append(((list1_i-list2_i)/list1_i)*100)
 
-        plt.plot(list_I2, difference,'-o')
+        plt.plot(list_I2, difference,'--o', markersize=10, label='$I_1 = $'+str(i))
         plt.annotate('$I_1 = $' + str(i), xy= (list_I2[len(list_I2)-1], difference[len(difference)-1]), xytext=(list_I2[len(list_I2)-1]+0.05, difference[len(difference)-1]+0), arrowprops=dict())
         plt.xlabel('Values of $I_2$')
         plt.ylabel('Percentage of the time improvement')  
@@ -274,8 +275,9 @@ while (j < len(figure_I1)):
         list_I2 = []
         i += 0.1 # step to change I_1
         i = round(i, 2)
-plt.plot(0, improvement[len(improvement)-1],'-o')
+plt.plot(0, improvement[len(improvement)-1],'--o', markersize=10, label='$I_1 = $'+str(i))
 plt.annotate('$I_1 = $' + str(1), xy= (0, improvement[len(improvement)-1]), xytext=(0.05, improvement[len(improvement)-1]), arrowprops=dict())
+plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0.)
 plt.savefig("fig3.jpg", bbox_inches='tight', pad_inches=0.5)
 
 ################################
@@ -295,7 +297,6 @@ ax.set_xlabel('$x : I_1$', labelpad=15)
 ax.set_ylabel('$y : I_2$', labelpad=15)
 ax.set_zlabel('$z :$ Percentage of the time improvement', labelpad=15)
 plt.savefig("fig4.jpg", bbox_inches='tight', pad_inches=0.5)
-plt.show()
 
 ##################################
 # Percentage of improvement of human errors
@@ -311,7 +312,7 @@ while (j < len(figure_I1)):
         j += 1
     else:
         difference = mean_H_errors[j-len(list_I2):j]
-        plt.plot(list_I2, difference,'-o')
+        plt.plot(list_I2, difference,'--o', markersize=10, label='$I_1 = $'+str(i))
         plt.annotate('$I_1 = $' + str(i), xy= (list_I2[len(list_I2)-1], difference[len(difference)-1]), xytext=(list_I2[len(list_I2)-1]+0.05, difference[len(difference)-1]+0), arrowprops=dict())
         plt.xlabel('Values of $I_2$')
         plt.ylabel('Percentage of human errors reduction obtained over 10000 simulations')
@@ -319,8 +320,9 @@ while (j < len(figure_I1)):
         list_I2 = []
         i += 0.1 # step to change I_1
         i = round(i, 2)
-plt.plot(0, mean_H_errors[len(mean_H_errors)-1],'-o')
+plt.plot(0, mean_H_errors[len(mean_H_errors)-1],'--o', markersize=10, label='$I_1 = $'+str(i))
 plt.annotate('$I_1 = $' + str(1), xy= (0, mean_H_errors[len(mean_H_errors)-1]), xytext=(0.05, mean_H_errors[len(mean_H_errors)-1]), arrowprops=dict())
+plt.legend(bbox_to_anchor=(1.01, 1), loc='upper left', borderaxespad=0.)
 plt.savefig("fig5.jpg", bbox_inches='tight', pad_inches=0.5)
 
 ##################################

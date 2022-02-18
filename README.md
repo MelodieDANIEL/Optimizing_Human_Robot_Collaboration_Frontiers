@@ -25,6 +25,7 @@ For each experiment, we got the following data:
 
 
 <a id="note1" href="#note1ref"><sup>1</sup></a>Full citation: Zakaria, M. H. D., Lengagne, S., Ramón, J. A. C., & Mezouar, Y. (2021). General Framework for the Optimization of the Human-Robot Collaboration Decision-Making Process Through the Ability to Change Performance Metrics. Frontiers in Robotics and AI, 8. 
+
 <a id="note2" href="#note2ref"><sup>2</sup></a>CNRS, Clermont Auvergne INP, Institut Pascal,  Université Clermont Auvergne, Clermont-Ferrand, France.  
 <a id="note3" href="#note3ref"><sup>3</sup></a>Centro Singular de Investigación en Tecnoloxías Intelixentes (CiTIUS), Universidade de Santiago de Compostela, Santiago de Compostela, España.
 

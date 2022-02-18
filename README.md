@@ -1,5 +1,5 @@
 # Optimizing_Human_Robot_Collaboration_Frontiers
-A paper based on these experiments is submitted to Frontiers in Robotics and AI. It is titled "Optimizing human-robot collaboration by adding performance metrics in the decision-making process", and it is written by Mélodie DANIEL<a href="#note1" id="note1ref"><sup>1</sup></a>, Sébastien LENGAGNE<a href="#note1" id="note1ref"><sup>1</sup></a>, Juan CORRALES<a href="#note2" id="note2ref"><sup>2</sup></a>, and Youcef MEZOUAR<a href="#note1" id="note1ref"><sup>1</sup></a>.
+A paper based on these experiments has been published in Frontiers in Robotics and AI. It is titled "General Framework for the Optimization of the Human-Robot Collaboration Decision-Making Process Through the Ability to Change Performance Metrics"<a href="#note1" id="note1ref"><sup>1</sup></a>, and it is written by Mélodie DANIEL<a href="#note2" id="note2ref"><sup>2</sup></a>, Sébastien LENGAGNE<a href="#note2" id="note2ref"><sup>2</sup></a>, Juan CORRALES<a href="#note3" id="note3ref"><sup>3</sup></a>, and Youcef MEZOUAR<a href="#note2" id="note2ref"><sup>2</sup></a>.
 
 We have conducted experiments in simulation on a construction game to prove the optimization of Human-Robot Collaboration (HRC). To do this, we optimize the HRC by considering performance metrics (time completion and the number of human errors) in the reward values of the utility function of the decision-making process. 
 
@@ -24,7 +24,7 @@ For each experiment, we got the following data:
 - "Figure 6": a 3D figure that presents the percentage of the reduction of the number of human errors.
 
 
-
-<a id="note1" href="#note1ref"><sup>1</sup></a>CNRS, Clermont Auvergne INP, Institut Pascal,  Université Clermont Auvergne, Clermont-Ferrand, France.  
-<a id="note2" href="#note2ref"><sup>2</sup></a>Centro Singular de Investigación en Tecnoloxías Intelixentes (CiTIUS), Universidade de Santiago de Compostela, Santiago de Compostela, España.
+<a id="note1" href="#note1ref"><sup>1</sup></a>Full citation: Zakaria, M. H. D., Lengagne, S., Ramón, J. A. C., & Mezouar, Y. (2021). General Framework for the Optimization of the Human-Robot Collaboration Decision-Making Process Through the Ability to Change Performance Metrics. Frontiers in Robotics and AI, 8. 
+<a id="note2" href="#note2ref"><sup>2</sup></a>CNRS, Clermont Auvergne INP, Institut Pascal,  Université Clermont Auvergne, Clermont-Ferrand, France.  
+<a id="note3" href="#note3ref"><sup>3</sup></a>Centro Singular de Investigación en Tecnoloxías Intelixentes (CiTIUS), Universidade de Santiago de Compostela, Santiago de Compostela, España.
 
